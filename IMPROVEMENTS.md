@@ -39,11 +39,22 @@ credible for a brand with no public history yet: fake review counts, fake testim
    `background-position: center`. Fixed with `72% center`, verified at 1440x900, 1440x1080,
    1280x800 and 390x844 with the real stylesheet.
 
+8. **Mobile nav overflowed the viewport** (~17px past the right edge at 390px): the sticky
+   header kept logo and three links on one flex row with no wrap. Found during live mobile
+   verification. Fixed with a 520px breakpoint that lets the header and nav wrap to two
+   rows and shrinks link size; verified locally at 390x844 and re-verified live.
+
 ### Pre-ship review checklist (v1)
 - [x] All 7 images visually inspected (no text artifacts, consistent series)
 - [x] Local desktop and mobile renders inspected at real viewport sizes
 - [x] Copy reviewed: no unconfirmed merchant claims; WhatsApp behavior stated accurately
-- [ ] Live Pages URL loads on desktop and mobile widths
-- [ ] Filter chips work; no card disappears unexpectedly
-- [ ] Buy now link opens wa.me with the correct product name prefilled
-- [ ] Repo visibility per owner's decision; Pages source points at main/(root)
+- [x] Live Pages URL loads on desktop and mobile widths
+- [x] Filter chips work; no card disappears unexpectedly (FLORAL shows ISHQ only)
+- [x] Buy now link opens wa.me with the correct product name prefilled (no message sent)
+- [x] Repo visibility per owner's decision (public, approved 2026-11-15); Pages source main/(root)
+
+### Known follow-ups (not shipped bugs)
+- Live site serves on the owner's custom domain (n4deem.is-a.dev/sukhan/) via redirect from
+  nadeem9986.github.io/sukhan/; wa.me image links use the github.io URL and resolve through
+  the redirect. If the custom domain is ever removed, links keep working unchanged.
+- Product names, notes and imagery remain samples pending the owner's real catalogue and prices.

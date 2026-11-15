@@ -378,3 +378,9 @@ a { color: inherit; }
   .site-nav { gap: 1rem; }
   .collection, .order, .about { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
+
+@media (max-width: 520px) {
+  .site-header { flex-wrap: wrap; row-gap: 0.4rem; padding: 0.9rem 1.1rem; }
+  .site-nav { flex-wrap: wrap; gap: 0.4rem 0.9rem; }
+  .site-nav a { font-size: 0.72rem; }
+}
